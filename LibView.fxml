@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <SplitPane dividerPositions="0.45166959578207383" layoutX="14.0" layoutY="14.0" prefHeight="376.0" prefWidth="571.0">
+        <items>
+          <AnchorPane prefHeight="374.0" prefWidth="264.0">
+               <children>
+                  <ListView fx:id="SongList" layoutX="22.0" layoutY="14.0" prefHeight="342.0" prefWidth="218.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="360.0">
+               <children>
+                  <SplitPane dividerPositions="0.4653179190751445" layoutX="14.0" layoutY="14.0" orientation="VERTICAL" prefHeight="348.0" prefWidth="284.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="282.0">
+                           <children>
+                              <Button fx:id="delete" layoutX="117.0" layoutY="94.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" text="Delete Selected Song" />
+                              <Button fx:id="edit" layoutX="117.0" layoutY="125.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="151.0" text="Edit Selected Song" />
+                           </children></AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <Button fx:id="add" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#addSong" prefHeight="25.0" prefWidth="105.0" text="Add New Song"/>
+                              <TextField layoutX="106.0" layoutY="47.0" prefHeight="25.0" prefWidth="162.0" promptText="Required Text" fx:id="Name"/>
+                              <TextField layoutX="106.0" layoutY="79.0" prefHeight="25.0" prefWidth="162.0" promptText="Required Text" fx:id="Artist"/>
+                              <TextField layoutX="106.0" layoutY="111.0" prefHeight="25.0" prefWidth="162.0" fx:id="Album"/>
+                              <TextField layoutX="106.0" layoutY="143.0" prefHeight="25.0" prefWidth="162.0" fx:id="Year"/>
+                              <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="51.0" prefHeight="17.0" prefWidth="82.0" text="Song Name" />
+                              <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="83.0" prefHeight="17.0" prefWidth="82.0" text="Song Artist" />
+                              <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="115.0" prefHeight="17.0" prefWidth="82.0" text="Album Name" />
+                              <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="147.0" prefHeight="17.0" prefWidth="82.0" text="Song Year" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
